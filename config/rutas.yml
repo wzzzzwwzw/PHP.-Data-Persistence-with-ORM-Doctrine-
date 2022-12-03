@@ -1,0 +1,90 @@
+# rutas.yml
+---
+ruta_raíz:
+    path:     /
+    controller: 'funcionHomePage'
+    methods:   [ GET ]
+
+ruta_user_list:
+    path:     /users
+    controller: 'funcionListadoUsuarios'
+    methods:
+      - GET
+      -
+ruta_result_list:
+    path: /results
+    controller: 'funcionListadoResultados'
+    methods:
+                - GET
+ruta_create_user:
+    path:     /createuser
+    controller: 'funcionCrearUsuario'
+    methods:
+        - POST
+
+ruta_create_result:
+    path:     /createresult
+    controller: 'funcionCrearResultado'
+    methods:
+        - POST
+
+ruta_user_show:
+     path: /showuser/{name}
+     controller: 'funcionMostrarUsuario'
+     defaults:
+            name: _default_
+            methods:
+                - GET
+                - POST
+ruta_result_show:
+     path: /showresult/{name}
+     controller: 'funcionMostrarResultado'
+     defaults:
+                    name: _default_
+                    methods:
+                        - GET
+                        - POST
+ruta_user_delete:
+     path: /deleteuser/{name}
+     controller: 'funcionBorrarUsuario'
+     defaults:
+                    name: _default_
+                    methods:
+                                  - DELETE
+                                  - POST
+
+ruta_result_delete:
+     path: /deleteresult/{name}
+     controller: 'funcionBorrarResultado'
+     defaults:
+                    name: _default_
+                    methods:
+                               - DELETE
+                               - POST
+ruta_user_update:
+     path: /updateuser/{name}
+     controller: 'funcionActualizarUsuario'
+     defaults:
+                    name: _default_
+                    methods:
+                                 - PUT
+                                 - POST
+ruta_result_update:
+  path:     /updateresult/{name}
+  controller: 'funcionActualizarResultado'
+  defaults:
+    name: _default_
+  methods:
+    - PUT
+    - POST
+    - GET
+
+ruta_user:
+    path:     /users/{name}
+    controller: 'funcionUsuario'
+    defaults:
+        name: _default_
+    methods:
+        - GET
+        - DELETE
+
